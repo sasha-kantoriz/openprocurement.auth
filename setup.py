@@ -32,6 +32,11 @@ setup(name='openprocurement.auth',
           'retrying',
           'libnacl'
       ],
+      package_data={
+          'openprocurement.auth': [
+              'templates/*.html'
+          ]
+      },
       entry_points={
           'paste.app_factory': [
               'oauth_provider = openprocurement.auth.provider:make_oath_provider_app'
